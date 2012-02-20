@@ -1,16 +1,11 @@
-from tw.core.testutil import WidgetTestCase
-from tw.dyntext import *
+from tw2.core.testbase import  WidgetTest
+from tw2.dyntext import *
 
-class TestWidget(WidgetTestCase):
+class TestDemoWidget(WidgetTest):
     # place your widget at the TestWidget attribute
-    TestWidget = Dyntext
-    # Initilization args. go here 
-    widget_kw = {}
+    widget = DynamicTextWidget
 
-    def test_render(self):
-        # Asserts 'foo' and 'test' (the test widget's id) appear in rendered 
-        # string when 'foo' is passed as value to render
-        self.assertInOutput(['foo', 'test'], "foo")
-        # Asserts 'ohlalala' does not appear in rendered string when render 
-        # is called without args
-        self.assertNotInOutput(['ohlalala'])
+    # Initilization args. go here
+    attrs = {'id' : 'affected_count'}
+    params = {'data_url' : '/stats/affected_count'}
+    expected = """<span id="affected_count"></span>"""

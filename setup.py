@@ -18,6 +18,15 @@ setup(
     namespace_packages = ['tw2'],
     zip_safe=False,
     include_package_data=True,
+    tests_require = [
+        'nose',
+        'BeautifulSoup',
+        'Genshi',
+        'mako',
+        # formencode isn't actually needed, but is just here to patch up
+        # tw2.forms
+        'strainer',
+    ],
     test_suite = 'nose.collector',
     entry_points="""
         [tw2.widgets]
