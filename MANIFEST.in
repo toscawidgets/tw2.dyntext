@@ -1,0 +1,2 @@
+recursive-include tw2/dyntext/templates *
+recursive-include tw2/dyntext/static *
