@@ -1,14 +1,16 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='',
-    version='',
-    description='',
-    author='',
-    author_email='',
-    url='',
+    name='tw2.dyntext',
+    version='0.0.1',
+    description='Dynamic Text widget for TW2. Allows text to be pulled from JSON objects live.',
+    author='Greg Jurman',
+    author_email='gdj2214@rit.edu',
+    url='http://github.com/gregjurman/tw2.dyntext',
     install_requires=[
         "tw2.core",
+        "tw2.jquery",
+        "mako"
         ## Add other requirements here
         # "Genshi",
         ],
