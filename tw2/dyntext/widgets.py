@@ -22,9 +22,6 @@ class DynamicTextWidget(twc.Widget):
 
     initial_text = twc.Param('Initial text to place in the widget', default='')
 
-    def j(cls, attr):
-       return json.dumps(getattr(cls, attr))
-
     def prepare(self):
         if self.data_url is None:
             raise ValueError, "DynamicTextWidget data_url parameter must be set"
