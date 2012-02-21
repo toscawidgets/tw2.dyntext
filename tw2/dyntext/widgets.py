@@ -27,7 +27,9 @@ class DynamicTextWidget(twc.Widget):
 
     def prepare(self):
         if self.data_url is None:
-            raise ValueError, "data_url must be a string"
+            raise ValueError, "DynamicTextWidget data_url parameter must be set"
+        elif 'str' not in str(type(self.data_url)):
+            raise ValueError, "DynamicTextWidget data_url parameter must be a string"
 
         super(DynamicTextWidget, self).prepare()
         # put code here to run just before the widget is displayed
