@@ -27,6 +27,7 @@ setup(
         # tw2.forms,
         'formencode',
         'strainer',
+        'WebTest'
     ],
     test_suite = 'nose.collector',
     entry_points="""
