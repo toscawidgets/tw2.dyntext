@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tw2.dyntext',
-    version='0.0.2',
+    version='0.0.3',
     description='Dynamic Text widget for TW2. Allows text to be pulled from JSON objects live.',
     author='Greg Jurman',
     author_email='gdj2214@rit.edu',
