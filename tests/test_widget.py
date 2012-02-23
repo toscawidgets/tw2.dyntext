@@ -1,9 +1,9 @@
 from tw2.core.testbase import  WidgetTest
-from tw2.dyntext import DynamicTextWidget
+import tw2.dyntext
 
 class TestDemoWidget(WidgetTest):
     # place your widget at the TestWidget attribute
-    widget = DynamicTextWidget
+    widget = tw2.dyntext.DynamicTextWidget
 
     # Initilization args. go here
     attrs = {'id' : 'affected_count'}
