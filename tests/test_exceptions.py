@@ -23,7 +23,7 @@ def setup():
     twc.core.request_local()['middleware'] = twc.make_middleware()
 
 def test_exception_nodata_url():
-    w = tw2.dyntext.DynamicTextWidget(id='foobar')
+    w = tw2.dyntext.PollingDynamicTextWidget(id='foobar')
     try:
         w.display()
         assert(False)
@@ -31,7 +31,7 @@ def test_exception_nodata_url():
         assert(str(e) == 'DynamicTextWidget data_url parameter must be set')
 
 def test_exception_bad_data_url():
-    w = tw2.dyntext.DynamicTextWidget(id='foobar', data_url=dict())
+    w = tw2.dyntext.PollingDynamicTextWidget(id='foobar', data_url=dict())
     try:
         w.display()
         assert(False)

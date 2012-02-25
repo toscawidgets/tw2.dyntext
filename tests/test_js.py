@@ -23,7 +23,7 @@ def setup():
     twc.core.request_local()['middleware'] = twc.make_middleware()
 
 def test_js_call():
-    w = tw2.dyntext.DynamicTextWidget(id='foobar', data_url="/herp/derp")
+    w = tw2.dyntext.PollingDynamicTextWidget(id='foobar', data_url="/herp/derp")
     w.display()
 
     js_calls = filter(lambda x: "JSFuncCall" in str(x), w.resources)
