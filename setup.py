@@ -8,7 +8,7 @@ import logging
 
 setup(
     name='tw2.dyntext',
-    version='0.0.3',
+    version='0.0.4',
     description='Dynamic Text widget for TW2. Allows text to be pulled from JSON objects live.',
     author='Greg Jurman',
     author_email='gdj2214@rit.edu',
