@@ -1,1 +1,1 @@
-from widgets import DynamicTextWidget
+from widgets import DynamicTextWidget, PollingDynamicTextWidget

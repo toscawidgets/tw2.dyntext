@@ -12,12 +12,13 @@ import random
 import webob
 
 class DemoDynamicTextWidget(widgets.DynamicTextWidget):
+    initial_value = "I don't really do anything unless you call setDynamicText()."
+
+class DemoPollingDynamicTextWidget(widgets.PollingDynamicTextWidget):
     # Provide default parameters, value, etc... here
     # default = <some-default-value>
     data_url = '/dynamic_text_demo'
     
-    pass
-
     @classmethod
     def request(cls, req):
         lottery_numbers = ", ".join([str(random.randint(1,100)) for x in range(5)])
