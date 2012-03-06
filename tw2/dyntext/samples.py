@@ -30,4 +30,4 @@ class DemoPollingDynamicTextWidget(widgets.PollingDynamicTextWidget):
 
 import tw2.core as twc
 mw = twc.core.request_local()['middleware']
-mw.controllers.register(DemoDynamicTextWidget, 'dynamic_text_demo')
+mw.controllers.register(DemoPollingDynamicTextWidget, 'dynamic_text_demo')
