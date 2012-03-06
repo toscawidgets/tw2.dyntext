@@ -8,11 +8,17 @@ class DynamicTextWidget(twc.Widget):
     template = "mako:tw2.dyntext.templates.dyntext"
 
     resources = [
+        jquery_js,
         twc.JSLink(modname=__name__, filename='static/dyntext.js'),
-        jquery_js
     ]
 
-    initial_text = twc.Param('Initial text to place in the widget', default='')
+    initial_text = twc.Param(
+        description='Initial text to place in the widget. Default: None',
+        default='')
+
+    wrap = twc.Param(
+        description = 'Tag to wrap the widget with. Default: span',
+        default='span')
 
     def prepare(self):
         super(DynamicTextWidget, self).prepare()
