@@ -12,7 +12,7 @@ setup(
     description='Dynamic Text widget for TW2. Allows text to be pulled from JSON objects live.',
     author='Greg Jurman',
     author_email='gdj2214@rit.edu',
-    url='http://github.com/gregjurman/tw2.dyntext',
+    url='http://github.com/toscawidgets/tw2.dyntext',
     install_requires=[
         "tw2.core",
         "tw2.jquery",
