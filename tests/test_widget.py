@@ -1,14 +1,14 @@
 from tw2.core.testbase import  WidgetTest
 import tw2.dyntext
 
-class TestDemoWidget(WidgetTest):
+class TestPollingDemoWidget(WidgetTest):
     # place your widget at the TestWidget attribute
     widget = tw2.dyntext.PollingDynamicTextWidget
 
     # Initilization args. go here
     attrs = {'id' : 'affected_count'}
-    params = {'data_url' : '/stats/affected_count'}
-    expected = """<span id="affected_count"></span>"""
+    params = {'wrap': 'div', 'data_url' : '/stats/affected_count'}
+    expected = """<div id="affected_count"></div>"""
 
 
 class TestDemoWidget(WidgetTest):

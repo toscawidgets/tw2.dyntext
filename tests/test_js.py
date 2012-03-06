@@ -1,6 +1,8 @@
 import tw2.core as twc
 import tw2.dyntext
 
+from nose.tools import eq_
+
 def request_local_tst():
     global _request_local, _request_id
 # if _request_id is None:
@@ -31,4 +33,6 @@ def test_js_call():
     assert(len(js_calls) > 0)
 
     for js_call in js_calls:
-        assert(js_call.src == """setupPollingDynText("foobar", "/herp/derp", 5000)""")
+        js = js_call.req()
+        js.prepare()
+        eq_(js.src, """setupPollingDynText("foobar", "/herp/derp", 5000)""")
