@@ -8,7 +8,7 @@ import logging
 
 setup(
     name='tw2.dyntext',
-    version='0.0.4',
+    version='0.0.5',
     description='Dynamic Text widget for TW2. Allows text to be pulled from JSON objects live.',
     author='Greg Jurman',
     author_email='gdj2214@rit.edu',
@@ -27,7 +27,6 @@ setup(
     tests_require = [
         'nose',
         'BeautifulSoup',
-        'Genshi',
         'mako',
         # formencode isn't actually needed, but is just here to patch up
         # tw2.forms,
